@@ -78,13 +78,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LibMgmtSys.ICache\LibMgmtSys.ICache.csproj">
-      <Project>{C35EC53D-4C90-40D5-9B12-943DF8479600}</Project>
-      <Name>LibMgmtSys.ICache</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LibMgmtSys.IDAL\LibMgmtSys.IDAL.csproj">
-      <Project>{548652B6-1D56-49E6-82CC-FF057B5B144F}</Project>
-      <Name>LibMgmtSys.IDAL</Name>
+    <ProjectReference Include="..\LibMgmtSys.ILog\LibMgmtSys.ILog.csproj">
+      <Project>{56DE7CA5-1B6E-4AEC-9F45-26D89FF69CD0}</Project>
+      <Name>LibMgmtSys.ILog</Name>
     </ProjectReference>
     <ProjectReference Include="..\LibMgmtSys.IService\LibMgmtSys.IService.csproj">
       <Project>{504172D4-80EE-4E1C-9940-D072961B313F}</Project>
