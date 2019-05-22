@@ -6,14 +6,14 @@ namespace LibMgmtSys.IService
 {
     public interface IService<T> where T : class
     {
-        IEnumerable<T> Select(Expression<Func<T, bool>> whereExpression, Expression<Func<T, object>> orderByExpression = null);
+        IEnumerable<T> Select(Expression<Func<T, bool>> whereExpression);
 
         T QuerySingle(Expression<Func<T, bool>> whereExpression);
 
-        void Insert(IEnumerable<T> entities);
+        IEnumerable<T> Insert(IEnumerable<T> entities);
 
         int Remove(Expression<Func<T, bool>> whereExpression);
 
-        int ClearTable();
+        int Update(T entity);
     }
 }

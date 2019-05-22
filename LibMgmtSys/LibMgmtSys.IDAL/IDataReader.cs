@@ -6,7 +6,7 @@ namespace LibMgmtSys.IDAL
 {
     public interface IDataReader<T> where T : class
     {
-        IEnumerable<T> Select(Expression<Func<T, bool>> whereExpression, Expression<Func<T, object>> orderByExpression = null);
+        IEnumerable<T> Select(Expression<Func<T, bool>> whereExpression);
 
         T QuerySingle(Expression<Func<T, bool>> whereExpression);
     }

@@ -9,12 +9,12 @@ namespace LibMgmtSys.IDAL
 {
     public interface IDataWriter<T> where T : class
     {
-        dynamic Insert(T entity);
+        int Insert(T entity);
 
-        void Insert(IEnumerable<T> entities);
+        IEnumerable<T> Insert(IEnumerable<T> entities);
 
         int Delete(Expression<Func<T, bool>> whereExpression);
 
-        int Update(object entity, Expression<Func<T, bool>> whereExpression);
+        int Update(T entity);
     }
 }

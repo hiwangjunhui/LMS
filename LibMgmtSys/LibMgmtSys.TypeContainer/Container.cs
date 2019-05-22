@@ -44,8 +44,10 @@ namespace LibMgmtSys.TypeContainer
 
             //注入IService及其实现类
             var serviceTypes = allAssemblies.SelectMany(a => select(a, typeof(IService<>))).ToArray();
-            Array.ForEach(serviceTypes, type => builder.RegisterGeneric(type).As(typeof(IService<>))); //服务
-            
+#pragma warning disable CS0618 // 类型或成员已过时
+            Array.ForEach(serviceTypes, type => builder.RegisterGeneric(type).As(typeof(IService<>)).InstancePerHttpRequest()); //服务
+#pragma warning restore CS0618 // 类型或成员已过时
+
             //注入控制器
             var assemblys = allAssemblies.Where(a => select(a, typeof(IController))?.Any() ?? false).ToArray();
             builder.RegisterControllers(assemblys);
