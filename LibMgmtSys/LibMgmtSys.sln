@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibMgmtSys.DAL", "LibMgmtSy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibMgmtSys.IService", "LibMgmtSys.IService\LibMgmtSys.IService.csproj", "{504172D4-80EE-4E1C-9940-D072961B313F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibMgmtSys.Core", "LibMgmtSys.Core\LibMgmtSys.Core.csproj", "{0D164DDC-8FCB-474F-A166-6F30135A3AE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibMgmtSys.ICache", "LibMgmtSys.ICache\LibMgmtSys.ICache.csproj", "{C35EC53D-4C90-40D5-9B12-943DF8479600}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{504172D4-80EE-4E1C-9940-D072961B313F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{504172D4-80EE-4E1C-9940-D072961B313F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{504172D4-80EE-4E1C-9940-D072961B313F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D164DDC-8FCB-474F-A166-6F30135A3AE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D164DDC-8FCB-474F-A166-6F30135A3AE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D164DDC-8FCB-474F-A166-6F30135A3AE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D164DDC-8FCB-474F-A166-6F30135A3AE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C35EC53D-4C90-40D5-9B12-943DF8479600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C35EC53D-4C90-40D5-9B12-943DF8479600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C35EC53D-4C90-40D5-9B12-943DF8479600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C35EC53D-4C90-40D5-9B12-943DF8479600}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
