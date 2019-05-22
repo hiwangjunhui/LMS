@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibMgmtSys.IService
 {
-    public class Class1
+    public class IService
     {
     }
 }
