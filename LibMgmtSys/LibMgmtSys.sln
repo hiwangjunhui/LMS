@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibMgmtSys.Core", "LibMgmtS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibMgmtSys.ICache", "LibMgmtSys.ICache\LibMgmtSys.ICache.csproj", "{C35EC53D-4C90-40D5-9B12-943DF8479600}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibMgmtSys.TypeContainer", "LibMgmtSys.TypeContainer\LibMgmtSys.TypeContainer.csproj", "{580D626F-23EE-4E96-9B9F-FAF4A936E25A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{C35EC53D-4C90-40D5-9B12-943DF8479600}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C35EC53D-4C90-40D5-9B12-943DF8479600}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C35EC53D-4C90-40D5-9B12-943DF8479600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{580D626F-23EE-4E96-9B9F-FAF4A936E25A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{580D626F-23EE-4E96-9B9F-FAF4A936E25A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{580D626F-23EE-4E96-9B9F-FAF4A936E25A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{580D626F-23EE-4E96-9B9F-FAF4A936E25A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

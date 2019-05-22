@@ -44,5 +44,11 @@
     <Compile Include="IService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibMgmtSys.IDAL\LibMgmtSys.IDAL.csproj">
+      <Project>{548652b6-1d56-49e6-82cc-ff057b5b144f}</Project>
+      <Name>LibMgmtSys.IDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
