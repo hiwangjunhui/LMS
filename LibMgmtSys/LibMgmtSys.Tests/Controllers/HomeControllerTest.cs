@@ -13,13 +13,24 @@ namespace LibMgmtSys.Tests.Controllers
     public class HomeControllerTest
     {
         [TestMethod]
-        public void Index()
+        public void Create()
         {
             // Arrange
             HomeController controller = new HomeController();
-
             // Act
-            ViewResult result = controller.Index() as ViewResult;
+            ViewResult result = controller.Create() as ViewResult;
+
+            // Assert
+            Assert.IsNotNull(result);
+        }
+        
+        [TestMethod]
+        public void Login()
+        {
+            // Arrange
+            HomeController controller = new HomeController();
+            // Act
+            ViewResult result = controller.Login() as ViewResult;
 
             // Assert
             Assert.IsNotNull(result);
