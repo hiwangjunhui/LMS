@@ -16,6 +16,8 @@ namespace LibMgmtSys.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            TypeContainer.Container.SetDependencyResolver();//依赖注入配置
         }
     }
 }

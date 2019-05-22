@@ -184,6 +184,16 @@
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LibMgmtSys.Models\LibMgmtSys.Models.csproj">
+      <Project>{8dec115e-4a9d-4627-bdec-3370a4000999}</Project>
+      <Name>LibMgmtSys.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibMgmtSys.TypeContainer\LibMgmtSys.TypeContainer.csproj">
+      <Project>{580d626f-23ee-4e96-9b9f-faf4a936e25a}</Project>
+      <Name>LibMgmtSys.TypeContainer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
