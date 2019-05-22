@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DA52C967-422A-4B43-8DDA-3148F699BEDC}</ProjectGuid>
+    <ProjectGuid>{6198DAB1-765B-4DB1-9F0F-325EE3BB34B6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>LibMgmtSys.Service</RootNamespace>
-    <AssemblyName>LibMgmtSys.Service</AssemblyName>
+    <RootNamespace>LibMgmtSys.Utils</RootNamespace>
+    <AssemblyName>LibMgmtSys.Utils</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,21 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Service.cs" />
+    <Compile Include="Utils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\LibMgmtSys.IDAL\LibMgmtSys.IDAL.csproj">
-      <Project>{548652b6-1d56-49e6-82cc-ff057b5b144f}</Project>
-      <Name>LibMgmtSys.IDAL</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\LibMgmtSys.IService\LibMgmtSys.IService.csproj">
-      <Project>{504172d4-80ee-4e1c-9940-d072961b313f}</Project>
-      <Name>LibMgmtSys.IService</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>xcopy "$(ProjectDir)$(OutDir)*.dll" "$(SolutionDir)LibmgmtSys.Web\bin\" /E /I /y</PostBuildEvent>
-  </PropertyGroup>
 </Project>

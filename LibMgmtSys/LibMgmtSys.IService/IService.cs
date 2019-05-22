@@ -10,7 +10,7 @@ namespace LibMgmtSys.IService
 
         T QuerySingle(Expression<Func<T, bool>> whereExpression);
 
-        IEnumerable<T> Insert(IEnumerable<T> entities);
+        int Insert(T entity);
 
         int Remove(Expression<Func<T, bool>> whereExpression);
 

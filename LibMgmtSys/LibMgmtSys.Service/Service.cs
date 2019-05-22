@@ -12,9 +12,9 @@ namespace LibMgmtSys.Service
             _dal = dal;
         }
 
-        public IEnumerable<T> Insert(IEnumerable<T> entities)
+        public int Insert(T entity)
         {
-            return _dal.Insert(entities);
+            return _dal.Insert(entity);
         }
 
         public T QuerySingle(Expression<Func<T, bool>> whereExpression)

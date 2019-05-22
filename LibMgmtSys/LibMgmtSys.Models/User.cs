@@ -12,6 +12,7 @@ namespace LibMgmtSys.Models
         public string UserName { get; set; }
 
         [StringLength(50), Required]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
     }
 }

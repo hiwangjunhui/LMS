@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.9.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.4.9.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -127,6 +130,8 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Filters\CustomHandleErrorAttribute.cs" />
+    <Compile Include="Filters\LoginRequiredAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -165,7 +170,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -185,6 +193,10 @@
     <Content Include="Scripts\jquery-3.3.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LibMgmtSys.IService\LibMgmtSys.IService.csproj">
+      <Project>{504172d4-80ee-4e1c-9940-d072961b313f}</Project>
+      <Name>LibMgmtSys.IService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibMgmtSys.Models\LibMgmtSys.Models.csproj">
       <Project>{8dec115e-4a9d-4627-bdec-3370a4000999}</Project>
       <Name>LibMgmtSys.Models</Name>
@@ -192,6 +204,10 @@
     <ProjectReference Include="..\LibMgmtSys.TypeContainer\LibMgmtSys.TypeContainer.csproj">
       <Project>{580d626f-23ee-4e96-9b9f-faf4a936e25a}</Project>
       <Name>LibMgmtSys.TypeContainer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LibMgmtSys.Utils\LibMgmtSys.Utils.csproj">
+      <Project>{6198dab1-765b-4db1-9f0f-325ee3bb34b6}</Project>
+      <Name>LibMgmtSys.Utils</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

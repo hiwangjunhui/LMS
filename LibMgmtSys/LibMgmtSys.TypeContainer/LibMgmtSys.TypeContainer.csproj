@@ -78,6 +78,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LibMgmtSys.IDAL\LibMgmtSys.IDAL.csproj">
+      <Project>{548652b6-1d56-49e6-82cc-ff057b5b144f}</Project>
+      <Name>LibMgmtSys.IDAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibMgmtSys.ILog\LibMgmtSys.ILog.csproj">
       <Project>{56DE7CA5-1B6E-4AEC-9F45-26D89FF69CD0}</Project>
       <Name>LibMgmtSys.ILog</Name>
@@ -88,4 +92,7 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy "$(ProjectDir)$(OutDir)*.dll" "$(SolutionDir)LibmgmtSys.Web\bin\" /E /I /y</PostBuildEvent>
+  </PropertyGroup>
 </Project>

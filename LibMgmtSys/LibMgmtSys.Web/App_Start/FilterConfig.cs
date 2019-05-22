@@ -7,7 +7,8 @@ namespace LibMgmtSys.Web
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+            filters.Add(new Filters.CustomHandleErrorAttribute());
+            filters.Add(new Filters.LoginRequiredAttribute());
         }
     }
 }

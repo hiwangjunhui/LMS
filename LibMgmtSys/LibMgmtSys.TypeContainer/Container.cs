@@ -38,6 +38,14 @@ namespace LibMgmtSys.TypeContainer
 
             //builder.RegisterTypes(cacheTypes).As<ICache.ICache>().SingleInstance();
 
+            //注入IDAL及其实现类
+            var dalTypes = allAssemblies.SelectMany(a => select(a, typeof(IDAL.IDAL<>))).ToArray();
+            Array.ForEach(dalTypes, type => builder.RegisterGeneric(type).As(typeof(IDAL.IDAL<>))); //泛型注入 数据库操作 - 同步
+
+            //注入IDALAsync及其实现类（数据的异步操作）
+            var dalAsyncTypes = allAssemblies.SelectMany(a => select(a, typeof(IDAL.IDALAsync<>))).ToArray();
+            Array.ForEach(dalAsyncTypes, type => builder.RegisterGeneric(type).As(typeof(IDAL.IDALAsync<>))); //泛型注入 数据库操作 - 异步
+
             //注入ILog及其实现类
             var logTypes = allAssemblies.SelectMany(a => select(a, typeof(ILog.ILog))).ToArray(); //日志记录模块
             builder.RegisterTypes(logTypes).As<ILog.ILog>();

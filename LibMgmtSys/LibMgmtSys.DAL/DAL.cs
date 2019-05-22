@@ -58,7 +58,7 @@ namespace LibMgmtSys.DAL
         {
             using (var context = GetContext())
             {
-                return context.Set<T>().Where(whereExpression);
+                return context.Set<T>().Where(whereExpression).ToList();
             }
         }
 
