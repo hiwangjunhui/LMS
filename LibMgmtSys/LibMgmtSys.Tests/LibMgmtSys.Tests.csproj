@@ -99,6 +99,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LibMgmtSys.IService\LibMgmtSys.IService.csproj">
+      <Project>{504172d4-80ee-4e1c-9940-d072961b313f}</Project>
+      <Name>LibMgmtSys.IService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\LibMgmtSys.Models\LibMgmtSys.Models.csproj">
       <Project>{8dec115e-4a9d-4627-bdec-3370a4000999}</Project>
       <Name>LibMgmtSys.Models</Name>

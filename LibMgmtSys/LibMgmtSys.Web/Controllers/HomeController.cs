@@ -9,10 +9,10 @@ namespace LibMgmtSys.Web.Controllers
         private IService.IService<Models.User> _userService;
         private IService.IService<Models.Book> _bookService;
 
-        public HomeController()
+        public HomeController(IService.IService<Models.User> userService, IService.IService<Models.Book> bookService)
         {
-            _userService = DependencyResolver.Current.GetService<IService.IService<Models.User>>();
-            _bookService = DependencyResolver.Current.GetService<IService.IService<Models.Book>>();
+            _userService = userService;
+            _bookService = bookService;
         }
 
         public ActionResult Index()

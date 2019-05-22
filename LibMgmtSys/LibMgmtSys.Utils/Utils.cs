@@ -21,15 +21,14 @@ namespace LibMgmtSys.Utils
                 return content;
             }
             
-            using (var md5 = MD5.Create())
+            using (var md5 = new MD5CryptoServiceProvider())
             {
-               var bytes = md5.ComputeHash(Encoding.Default.GetBytes(content));
+               var bytes = md5.ComputeHash(Encoding.ASCII.GetBytes(content));
                 var sb = new StringBuilder();
-                for (byte i = 0; i < bytes.Length; i++)
+                foreach (byte b in bytes)
                 {
-                    sb.Append(i.ToString("X2"));
+                    sb.Append(b.ToString("X2"));
                 }
-
                 return sb.ToString();
             }
         }
