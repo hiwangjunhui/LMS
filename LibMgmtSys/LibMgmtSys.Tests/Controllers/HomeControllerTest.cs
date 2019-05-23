@@ -31,7 +31,7 @@ namespace LibMgmtSys.Tests.Controllers
             // Arrange
             HomeController controller = new HomeController(new Service<Models.User>(), new Service<Models.Book>());
             // Act
-            ViewResult result = controller.Delete(Guid.Empty) as ViewResult;
+            RedirectToRouteResult result = controller.Delete(Guid.Empty) as RedirectToRouteResult;
 
             // Assert
             Assert.IsNotNull(result);
